@@ -13,10 +13,10 @@ str_program_dir="/usr/local/${program_name}"
 program_init="/etc/init.d/${program_name}"
 program_config_file="frps.ini"
 ver_file="/tmp/.frp_ver.sh"
-program_version_link="https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/version.sh"
-str_install_shell=https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/install-frps.sh
+program_version_link="https://raw.githubusercontent.com/afrojewelz/onekey-install-shell/master/frps/version.sh"
+str_install_shell=https://raw.githubusercontent.com/afrojewelz/onekey-install-shell/master/frps/install-frps.sh
 shell_update(){
-    fun_clangcn "clear"
+    fun_afrojewelz "clear"
     echo "Check updates for shell..."
     remote_shell_version=`wget --no-check-certificate -qO- ${str_install_shell} | sed -n '/'^version'/p' | cut -d\" -f2`
     if [ ! -z ${remote_shell_version} ]; then
@@ -39,7 +39,7 @@ shell_update(){
         fi
     fi
 }
-fun_clangcn(){
+fun_afrojewelz(){
     local clear_flag=""
     clear_flag=$1
     if [[ ${clear_flag} == "clear" ]]; then
